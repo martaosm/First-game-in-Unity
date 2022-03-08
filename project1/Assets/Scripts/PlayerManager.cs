@@ -6,7 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
 
-    private float _moveSpeed = 5.0f;
+    private float _moveSpeed = 8.0f;
 
     private float _jump = 10.0f;
 
@@ -19,6 +19,8 @@ public class PlayerManager : MonoBehaviour
 
     private Animator _animator;
 
+    private GameMaster gm;
+
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -26,6 +28,7 @@ public class PlayerManager : MonoBehaviour
         _groundChecker = transform.Find("GroundChecker");
         _checkRadius = 0.5f;
         _animator = GetComponent<Animator>();
+        gm = GameObject.FindWithTag("GameMaster").GetComponent<GameMaster>();
     }
 
     // Update is called once per frame
@@ -87,5 +90,19 @@ public class PlayerManager : MonoBehaviour
     void FlipPlayer()
     {
         transform.Rotate(0.0f, 180.0f, 0.0f);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Point")
+        {
+            Destroy(collision.gameObject);
+            gm.points++;
+        }
+        if (collision.tag == "BiggerPoint")
+        {
+            Destroy(collision.gameObject);
+            gm.points+=10;
+        }
     }
 }

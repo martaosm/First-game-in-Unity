@@ -53,13 +53,22 @@
     <UnityVersion>2020.3.23f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\PlayerManager.cs" />
+    <Compile Include="Assets\Scripts\GameMaster.cs" />
+    <Compile Include="Assets\Scripts\pointAnimator.cs" />
+    <Compile Include="Assets\Scripts\levelManager.cs" />
+    <Compile Include="Assets\Scripts\StartButton.cs" />
+    <Compile Include="Assets\Scripts\BackgroundAnimator.cs" />
+    <Compile Include="Assets\Scripts\PlayerScoreDisplay.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Prototype Hero Demo\EULA.txt" />
+    <None Include="Assets\Free Icons for Mine Location Pixel Art\Icons_name.txt" />
+    <None Include="Assets\Free Icons for Mine Location Pixel Art\License.txt" />
     <None Include="Assets\Prototype Hero Demo\Instructions.txt" />
     <None Include="Assets\free-swamp-game-tileset-pixel-art\Font.txt" />
+    <None Include="Assets\Free Icons for Mine Location Pixel Art\Font.txt" />
     <None Include="Assets\free-swamp-game-tileset-pixel-art\License.txt" />
   </ItemGroup>
   <ItemGroup>
