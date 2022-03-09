@@ -8,7 +8,7 @@ public class PlayerManager : MonoBehaviour
 
     private float _moveSpeed = 8.0f;
 
-    private float _jump = 10.0f;
+    private float _jump = 16.5f;
 
     private bool _faceRigth = true;
 
